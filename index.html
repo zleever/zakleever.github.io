@@ -12,14 +12,16 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: #000;
       color: #fff;
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 40px 20px;
-      opacity: 0;
-      animation: fadeIn 3s ease-in-out forwards;
       cursor: url('z-cursor-glow-huge.png'), auto;
     }
 
@@ -27,8 +29,13 @@
       to { opacity: 1; }
     }
 
+    .fade-in {
+      animation: fadeIn 3s ease-in-out forwards;
+      opacity: 0;
+    }
+
     .logo-fixed {
-      position: absolute;
+      position: fixed;
       top: 20px;
       left: 20px;
       width: 80px;
@@ -48,12 +55,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      padding-top: 120px;
+      padding-bottom: 60px;
     }
 
     a.release {
       display: block;
-      max-width: 400px;
+      max-width: 600px;
       margin: 0 auto 20px;
       transition: transform 0.3s ease;
     }
@@ -110,15 +118,29 @@
     }
 
     .footer {
-      position: absolute;
+      position: fixed;
       bottom: 10px;
       left: 20px;
       font-size: 12px;
       color: #555;
+      z-index: 1000;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .updates {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .updates a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .updates a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -128,7 +150,11 @@
     <img src="logo.png" alt="Zak Leever Logo" class="logo-fixed">
   </a>
 
-  <div id="top" class="main-content">
+  <div class="updates">
+    <a href="https://laylo.com/zakleever" target="_blank">updates</a>
+  </div>
+
+  <div id="top" class="main-content fade-in">
 
     <a href="https://open.spotify.com/track/4fovO1K2QqBBl3NgcBVKkL" class="release" target="_blank">
       <img src="make-it-right.jpg" alt="Latest Release: Make It Right" class="album">
@@ -138,24 +164,31 @@
     <div class="bio-toggle" onclick="toggleBio()">bio</div>
 
     <div class="bio-content" id="bio">
-      For Zak Leever, music isn’t just about self-expression—it’s a way towards self-empowerment and realizing one’s full potential. The artist and producer went from his childhood of studying with some of the world's premier jazz musicians to officially remixing several dance hits during his time at Berklee College of Music, including multiple singles for A-Trak, Anna Lunoe, and Keys N Krates.
+      Zak Leever’s productions have been rave-day earworms and brain-slated beats for years, unbeknownst to many. He’s a blind workhorse for his creations and for those he cares about in the music industry.
 
-      Zak went on to debut original vocal-led music on Diplo & Friends on Radio 1 BBC, Diplo’s Revolution on SiriusXM, and competing alongside some of the world's most influential DJs at A-Trak’s Goldie Awards all before releasing his first original single. Now, Zak is releasing music in his own personal and reflective world in a kaleidoscopic vision of electronic bass, vintage synths, and intimate, reflective lyrics.
+Zak has lived for music since age 8, choosing the piano over Ritalin as ADHD treatment—breaking his femur once and cracking his skull to Fatboy Slim six times as a child (twice on marble tables).
 
-      Zak has received regular support from DJs & tastemakers across the globe, and his singles have found their home on Spotify editorial playlists like Chill Tracks, Metropolis, Heart Beats, and more. Zak continues to develop his sound, working on his debut EP, selecting productions, and collaborating with artists that he's inspired by.
+Falling deeply for electronic music at 14, Zak recreated deadmau5 and Skrillex sounds, made his YouTube debut, and began remixing amidst EDM’s explosion in the US as commercial music. With his best friends, Zak threw high school raves, inventing his teenage moniker “Stand Tall Fists Up” (AKA STFU).
+
+Through this moniker, Leever connected with A-Trak, Diplo, Coco & Breezy, DJ Craze, and a slew of other DJs at a young age, becoming a craftsman for dance music. His productions have been Billboard Dance hits and are practically in constant rotation on SiriusXM.
+
+Today, Zak is a committed songwriter in the dance music space, utilizing his classical and jazz backgrounds to enrich a dying internet in need of frank humanness. Zak’s purpose is rooted in honest self-transformation and an obsession with what makes people happy—which certainly isn’t material objects, but love, forgiveness, emotional awareness, and an intimacy with meek things we find so comforting. For Zak, these are lush chords, heavy beats, and a connection with his audience at any scale.
+
+info@moodswingmgmt.com
+ 
     </div>
 
     <div class="socials">
       <a href="https://instagram.com/zakleever" target="_blank">Instagram</a>
-      <a href="https://open.spotify.com/artist/3QOVtB6UoXYvppwM0nQLtd" target="_blank">Spotify</a>
+      <a href="https://open.spotify.com/artist/52YFhvzbffRkaVJQCjFlpU" target="_blank">Spotify</a>
       <a href="https://www.tiktok.com/@zakleever" target="_blank">TikTok</a>
       <a href="https://www.youtube.com/@zakleever" target="_blank">YouTube</a>
     </div>
 
   </div>
 
-  <div class="footer">
-    © Zak Leever. All rights reserved.
+  <div class="footer" id="footer">
+    © <span id="year"></span> Zak Leever. All rights reserved.
   </div>
 
   <script>
@@ -163,6 +196,11 @@
       const bio = document.getElementById('bio');
       bio.style.display = (bio.style.display === 'block') ? 'none' : 'block';
     }
+
+    // Set current year in footer
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
   </script>
 
 </body>
