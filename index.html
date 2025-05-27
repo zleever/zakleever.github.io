@@ -149,6 +149,7 @@
 
   
   
+  
   .top8-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -158,15 +159,25 @@
   }
 
   .top8-box img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   @media (max-width: 600px) {
     .top8-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
     }
+
+    .top8-box img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .top8-name {
+      font-size: 10px;
+    }
+  }
+
 
     .top8-box img {
       width: 80px;
