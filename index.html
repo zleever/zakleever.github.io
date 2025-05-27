@@ -148,23 +148,36 @@
   }
 
   
+  
   .top8-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
     justify-items: center;
   }
 
   .top8-box img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
-  @media (max-width: 500px) {
-    .top8-name {
-      font-size: 10px;
+  @media (max-width: 600px) {
+    .top8-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
+
+    .top8-box img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .top8-name {
+      font-size: 11px;
+    }
+  }
+
 
     .top8-box img {
       width: 60px;
@@ -233,7 +246,7 @@ Today, Zak is a committed songwriter in the dance music space, utilizing his cla
         <div class="top8-name">Tom</div>
       </div>
       <div class="top8-box">
-        <img src="top8_2_a-trak (1).png" alt="A-Trak">
+        <img src="top8_2_a-trak.png" alt="A-Trak">
         <div class="top8-name">A-Trak</div>
       </div>
       <div class="top8-box">
@@ -245,7 +258,7 @@ Today, Zak is a committed songwriter in the dance music space, utilizing his cla
         <div class="top8-name">Anna Lunoe</div>
       </div>
       <div class="top8-box">
-        <img src="top8_6_dj_craze (1).png" alt="DJ Craze">
+        <img src="top8_6_dj_craze.png" alt="DJ Craze">
         <div class="top8-name">DJ Craze</div>
       </div>
       <div class="top8-box">
