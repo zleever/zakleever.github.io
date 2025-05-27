@@ -1,96 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Zak Leever</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      background-color: #000;
-      color: #00FF66;
-      font-family: "Courier New", Courier, monospace;
+    * {
       margin: 0;
       padding: 0;
-      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-      cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1012.cur'), auto;
+      box-sizing: border-box;
     }
-
-    .container {
-      width: 640px;
-      margin: 0 auto;
-      padding: 20px;
-      border: 2px solid #00FF66;
-      background-color: #111;
-      box-shadow: 0 0 10px #00FF66;
-    }
-
-    h1, h2 {
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       text-align: center;
-      margin: 0;
-      padding: 10px 0;
-      border-bottom: 1px dashed #00FF66;
+      padding: 40px 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
     }
-
-    a {
-      color: #00FFFF;
-      text-decoration: none;
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
-
-    a:hover {
-      color: #FF00FF;
-      text-decoration: underline;
+    img.logo {
+      max-width: 150px;
+      margin-bottom: 40px;
     }
-
-    .section {
-      margin-top: 20px;
+    a.release {
+      display: block;
+      max-width: 300px;
+      margin: 0 auto 20px;
+      transition: transform 0.3s ease;
     }
-
-    marquee {
-      color: #FFD700;
-      font-weight: bold;
-      margin-bottom: 20px;
+    a.release:hover {
+      transform: scale(1.05);
     }
-
-    .track {
-      margin: 10px 0;
-    }
-
     img.album {
       width: 100%;
-      border: 1px solid #00FF66;
+      border: 2px solid #fff;
+    }
+    .bio {
+      max-width: 500px;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 30px;
+      color: #ccc;
+    }
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .socials a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    .socials a:hover {
+      background-color: #fff;
+      color: #000;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <marquee scrollamount="5">🎧 Welcome to Zak Leever's Official 90s Web Zone 🎧</marquee>
+  <img src="logo.png" alt="Zak Leever Logo" class="logo">
 
-    <h1>ZAK LEEVER</h1>
-    <h2>Music Producer • Artist • Vibe Architect</h2>
+  <a href="https://open.spotify.com/track/4fovO1K2QqBBl3NgcBVKkL" class="release" target="_blank">
+    <img src="make-it-right.jpg" alt="Latest Release: Make It Right" class="album">
+  </a>
 
-    <div class="section">
-      <h3>🔥 Top Tracks</h3>
-      <div class="track"><a href="https://open.spotify.com/track/1oGX6s0SjBSMz1Z4I9a8zN" target="_blank">There Is A Light</a></div>
-      <div class="track"><a href="https://open.spotify.com/track/3e9HZxeyfWwjeyPAMmWSSQ" target="_blank">We Could Be</a></div>
-      <div class="track"><a href="https://open.spotify.com/track/2Liu65ZPjA5OFzcIRgeQvG" target="_blank">Fight It Back</a></div>
-    </div>
+  <div class="bio">
+    Zak Leever is a music producer, artist, and multi-instrumentalist known for his genre-blurring sound, blending future soul, electronic, and hip-hop elements. A Berklee College of Music graduate, Zak’s work has earned acclaim for its emotional depth, sonic polish, and infectious energy. Based in Los Angeles, he continues to craft music that connects deeply and moves globally.
+  </div>
 
-    <div class="section">
-      <h3>💿 Latest Release</h3>
-      <a href="https://open.spotify.com/track/6uLU6hMCjMI75M1A2tKUQC" target="_blank">
-        <img class="album" src="https://i.scdn.co/image/ab67616d0000b273909090909090909090909090" alt="needed u">
-      </a>
-    </div>
-
-    <div class="section">
-      <h3>📡 Connect</h3>
-      <div><a href="https://instagram.com/zakleever" target="_blank">Instagram</a></div>
-      <div><a href="https://tiktok.com/@zakleever" target="_blank">TikTok</a></div>
-      <div><a href="mailto:zakleevermusic@gmail.com">Email Me</a></div>
-    </div>
-
-    <div class="section" style="text-align: center; font-size: 12px; margin-top: 30px;">
-      &copy; 2025 Zak Leever. Made with 💾 in Web 1.0.
-    </div>
+  <div class="socials">
+    <a href="https://instagram.com/zakleever" target="_blank">Instagram</a>
+    <a href="https://open.spotify.com/artist/3QOVtB6UoXYvppwM0nQLtd" target="_blank">Spotify</a>
+    <a href="https://www.tiktok.com/@zakleever" target="_blank">TikTok</a>
+    <a href="https://www.youtube.com/@zakleever" target="_blank">YouTube</a>
   </div>
 
 </body>
