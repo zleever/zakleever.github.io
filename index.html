@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Zak Leever</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <style>
     * {
       margin: 0;
@@ -52,12 +51,29 @@
       width: 100%;
     }
 
-    .bio {
+    .tagline {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+      font-style: italic;
+    }
+
+    .bio-toggle {
+      margin-top: 8px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .bio-content {
       max-width: 600px;
       font-size: 16px;
       line-height: 1.6;
-      margin-top: 30px;
+      margin-top: 20px;
       color: #ccc;
+      display: none;
+      text-align: left;
     }
 
     .socials {
@@ -95,9 +111,15 @@
     <img src="make-it-right.jpg" alt="Latest Release: Make It Right" class="album">
   </a>
 
-  <div class="bio">
-    Zak Leever is a music producer, artist, and multi-instrumentalist known for his genre-blurring sound, blending future soul, electronic, and hip-hop elements. A Berklee College of Music graduate, Zak’s work has earned acclaim for its emotional depth, sonic polish, and infectious energy. Based in Los Angeles, he continues to craft music that connects deeply and moves globally.<br><br>
-    He has produced for top artists, built a loyal following through his innovative remixes and original releases, and gained attention from major record labels. His music bridges the technical finesse of jazz and electronic music with the emotional rawness of soul and hip-hop. Zak is committed to creating music that’s not only heard but deeply felt.
+  <div class="tagline">real human.</div>
+  <div class="bio-toggle" onclick="toggleBio()">bio</div>
+
+  <div class="bio-content" id="bio">
+    For Zak Leever, music isn’t just about self-expression—it’s a way towards self-empowerment and realizing one’s full potential. The artist and producer went from his childhood of studying with some of the world's premier jazz musicians to officially remixing several dance hits during his time at Berklee College of Music, including multiple singles for A-Trak, Anna Lunoe, and Keys N Krates.
+
+    Zak went on to debut original vocal-led music on Diplo & Friends on Radio 1 BBC, Diplo’s Revolution on SiriusXM, and competing alongside some of the world's most influential DJs at A-Trak’s Goldie Awards all before releasing his first original single. Now, Zak is releasing music in his own personal and reflective world in a kaleidoscopic vision of electronic bass, vintage synths, and intimate, reflective lyrics.
+
+    Zak has received regular support from DJs & tastemakers across the globe, and his singles have found their home on Spotify editorial playlists like Chill Tracks, Metropolis, Heart Beats, and more. Zak continues to develop his sound, working on his debut EP, selecting productions, and collaborating with artists that he's inspired by.
   </div>
 
   <div class="socials">
@@ -110,6 +132,17 @@
   <div class="footer">
     © Zak Leever. All rights reserved.
   </div>
+
+  <script>
+    function toggleBio() {
+      var bio = document.getElementById('bio');
+      if (bio.style.display === 'none' || bio.style.display === '') {
+        bio.style.display = 'block';
+      } else {
+        bio.style.display = 'none';
+      }
+    }
+  </script>
 
 </body>
 </html>
