@@ -126,48 +126,66 @@
       text-decoration: underline;
     }
   
-    .top8 {
-      margin-top: 60px;
-      text-align: center;
-    }
+  .top8-wrapper {
+    margin: 60px auto;
+    max-width: 600px;
+    padding: 10px;
+    background: #fff8dc;
+    color: black;
+    font-family: Tahoma, sans-serif;
+    border: 1px solid #f4a460;
+  }
 
-    .top8 h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+  .top8-header {
+    background-color: #ffe4b5;
+    border-bottom: 2px solid #f4a460;
+    padding: 10px;
+    font-weight: bold;
+  }
 
-    .top8-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+  .top8-friends {
+    font-weight: normal;
+  }
 
-    .top8-grid a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100px;
-      text-decoration: none;
-      color: white;
-    }
+  .top8-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
 
-    .top8-grid img {
-      width: 100px;
-      height: 100px;
-      border-radius: 8px;
-      object-fit: cover;
-      border: 2px solid #fff;
-    }
+  .top8-box {
+    text-align: center;
+  }
 
-    .top8-grid div {
-      margin-top: 8px;
-      font-size: 14px;
-      text-align: center;
-    }
+  .top8-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #00008b;
+  }
+
+  .top8-name {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .top8-footer {
+    text-align: right;
+    padding: 10px;
+  }
+
+  .top8-footer a {
+    color: darkred;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  .top8-footer a:hover {
+    text-decoration: underline;
+  }
 
 </style>
 </head>
@@ -196,67 +214,57 @@ Today, Zak is a committed songwriter in the dance music space, utilizing his cla
 
 <p>info@moodswingmgmt.com</p>
     </div>
-    
-    <div class="top8">
-      <h2>top 8</h2>
-      <div class="top8-grid">
-
-        <a href="https://www.instagram.com/atrak/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.scdn.co/image/ab6761610000e5eb4ad55f1c1f08bb7986e56e9e" alt="A-Trak">
-          <div>A-Trak</div>
-        </a>
-    
-
-        <a href="https://www.instagram.com/diplo/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.scdn.co/image/ab6761610000e5eb678b4d92f7cf4b30d9dfdc5b" alt="Diplo">
-          <div>Diplo</div>
-        </a>
-    
-
-        <a href="https://www.instagram.com/annalunoe/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.scdn.co/image/ab6761610000e5ebd3c10f760582b1d7fc6bafde" alt="Anna Lunoe">
-          <div>Anna Lunoe</div>
-        </a>
-    
-
-        <a href="https://www.instagram.com/keysnkrates/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.scdn.co/image/ab6761610000e5eb75a3b90ed3a6c5c4e9ea694c" alt="Keys N Krates">
-          <div>Keys N Krates</div>
-        </a>
-    
-
-        <a href="https://www.instagram.com/crazearoni/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.scdn.co/image/ab6761610000e5ebd5c2a48e02d1c6ed66b72945" alt="DJ Craze">
-          <div>DJ Craze</div>
-        </a>
-    
-
-        <a href="https://www.instagram.com/cocoandbreezy/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.scdn.co/image/ab6761610000e5ebea8c7fdbed5ff2b065f3641f" alt="Coco & Breezy">
-          <div>Coco & Breezy</div>
-        </a>
-    
-
-        <a href="https://www.instagram.com/skrillex/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.scdn.co/image/ab6761610000e5eb66c9248eb79e62c66a49bfa6" alt="Skrillex">
-          <div>Skrillex</div>
-        </a>
-    
-
-        <a href="https://www.instagram.com/channeltres/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.scdn.co/image/ab6761610000e5eb1a6bb39f336bd5f0e7684384" alt="Channel Tres">
-          <div>Channel Tres</div>
-        </a>
-    
-      </div>
-    </div>
-
-<div class="socials">
+    <div class="socials">
       <a href="https://instagram.com/zakleever" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="https://open.spotify.com/artist/52YFhvzbffRkaVJQCjFlpU" target="_blank" rel="noopener noreferrer">Spotify</a>
       <a href="https://www.tiktok.com/@zakleever" target="_blank" rel="noopener noreferrer">TikTok</a>
       <a href="https://www.youtube.com/@zakleever" target="_blank" rel="noopener noreferrer">YouTube</a>
     </div>
+  
+  <div class="top8-wrapper">
+    <div class="top8-header">
+      Your Top 8<br>
+      <span class="top8-friends">You have <span style="color: red;">68386756</span> Friends.</span>
+    </div>
+    <div class="top8-grid">
+      <div class="top8-box">
+        <img src="top8_5_tom.png" alt="Tom">
+        <div class="top8-name">Tom</div>
+      </div>
+      <div class="top8-box">
+        <img src="top8_2_a-trak.png" alt="A-Trak">
+        <div class="top8-name">A-Trak</div>
+      </div>
+      <div class="top8-box">
+        <img src="top8_8_diplo.png" alt="Diplo">
+        <div class="top8-name">Diplo</div>
+      </div>
+      <div class="top8-box">
+        <img src="top8_7_anna_lunoe.png" alt="Anna Lunoe">
+        <div class="top8-name">Anna Lunoe</div>
+      </div>
+      <div class="top8-box">
+        <img src="top8_6_dj_craze.png" alt="DJ Craze">
+        <div class="top8-name">DJ Craze</div>
+      </div>
+      <div class="top8-box">
+        <img src="top8_1_coco_and_breezy.png" alt="Coco & Breezy">
+        <div class="top8-name">Coco & Breezy</div>
+      </div>
+      <div class="top8-box">
+        <img src="top8_3_channel_tres.png" alt="Channel Tres">
+        <div class="top8-name">Channel Tres</div>
+      </div>
+      <div class="top8-box">
+        <img src="top8_4_skrillex.png" alt="Skrillex">
+        <div class="top8-name">Skrillex</div>
+      </div>
+    </div>
+    <div class="top8-footer">
+      <a href="#">View All of Your Friends</a>
+    </div>
+  </div>
+
   </div>
   <div class="footer" id="footer">
     © <span id="year"></span> Zak Leever. All rights reserved.
