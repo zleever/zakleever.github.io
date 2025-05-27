@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Zak Leever</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     * {
       margin: 0;
@@ -15,25 +16,39 @@
       background-color: #000;
       color: #fff;
       font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
       text-align: center;
       padding: 40px 20px;
       opacity: 0;
       animation: fadeIn 3s ease-in-out forwards;
-      cursor: url('z-cursor-glow.png'), auto;
+      cursor: url('z-cursor-glow-huge.png'), auto;
     }
 
     @keyframes fadeIn {
       to { opacity: 1; }
     }
 
-    img.logo {
-      max-width: 150px;
-      margin-bottom: 40px;
+    .logo-fixed {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      height: auto;
+      transition: width 0.3s ease;
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      .logo-fixed {
+        width: 50px;
+      }
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     a.release {
@@ -101,32 +116,42 @@
       font-size: 12px;
       color: #555;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
 
-  <img src="logo.png" alt="Zak Leever Logo" class="logo">
-
-  <a href="https://open.spotify.com/track/4fovO1K2QqBBl3NgcBVKkL" class="release" target="_blank">
-    <img src="make-it-right.jpg" alt="Latest Release: Make It Right" class="album">
+  <a href="#top">
+    <img src="logo.png" alt="Zak Leever Logo" class="logo-fixed">
   </a>
 
-  <div class="tagline">real human</div>
-  <div class="bio-toggle" onclick="toggleBio()">bio</div>
+  <div id="top" class="main-content">
 
-  <div class="bio-content" id="bio">
-    For Zak Leever, music isn’t just about self-expression—it’s a way towards self-empowerment and realizing one’s full potential. The artist and producer went from his childhood of studying with some of the world's premier jazz musicians to officially remixing several dance hits during his time at Berklee College of Music, including multiple singles for A-Trak, Anna Lunoe, and Keys N Krates.
+    <a href="https://open.spotify.com/track/4fovO1K2QqBBl3NgcBVKkL" class="release" target="_blank">
+      <img src="make-it-right.jpg" alt="Latest Release: Make It Right" class="album">
+    </a>
 
-    Zak went on to debut original vocal-led music on Diplo & Friends on Radio 1 BBC, Diplo’s Revolution on SiriusXM, and competing alongside some of the world's most influential DJs at A-Trak’s Goldie Awards all before releasing his first original single. Now, Zak is releasing music in his own personal and reflective world in a kaleidoscopic vision of electronic bass, vintage synths, and intimate, reflective lyrics.
+    <div class="tagline">real human.</div>
+    <div class="bio-toggle" onclick="toggleBio()">bio</div>
 
-    Zak has received regular support from DJs & tastemakers across the globe, and his singles have found their home on Spotify editorial playlists like Chill Tracks, Metropolis, Heart Beats, and more. Zak continues to develop his sound, working on his debut EP, selecting productions, and collaborating with artists that he's inspired by.
-  </div>
+    <div class="bio-content" id="bio">
+      For Zak Leever, music isn’t just about self-expression—it’s a way towards self-empowerment and realizing one’s full potential. The artist and producer went from his childhood of studying with some of the world's premier jazz musicians to officially remixing several dance hits during his time at Berklee College of Music, including multiple singles for A-Trak, Anna Lunoe, and Keys N Krates.
 
-  <div class="socials">
-    <a href="https://instagram.com/zakleever" target="_blank">Instagram</a>
-    <a href="https://open.spotify.com/artist/3QOVtB6UoXYvppwM0nQLtd" target="_blank">Spotify</a>
-    <a href="https://www.tiktok.com/@zakleever" target="_blank">TikTok</a>
-    <a href="https://www.youtube.com/@zakleever" target="_blank">YouTube</a>
+      Zak went on to debut original vocal-led music on Diplo & Friends on Radio 1 BBC, Diplo’s Revolution on SiriusXM, and competing alongside some of the world's most influential DJs at A-Trak’s Goldie Awards all before releasing his first original single. Now, Zak is releasing music in his own personal and reflective world in a kaleidoscopic vision of electronic bass, vintage synths, and intimate, reflective lyrics.
+
+      Zak has received regular support from DJs & tastemakers across the globe, and his singles have found their home on Spotify editorial playlists like Chill Tracks, Metropolis, Heart Beats, and more. Zak continues to develop his sound, working on his debut EP, selecting productions, and collaborating with artists that he's inspired by.
+    </div>
+
+    <div class="socials">
+      <a href="https://instagram.com/zakleever" target="_blank">Instagram</a>
+      <a href="https://open.spotify.com/artist/3QOVtB6UoXYvppwM0nQLtd" target="_blank">Spotify</a>
+      <a href="https://www.tiktok.com/@zakleever" target="_blank">TikTok</a>
+      <a href="https://www.youtube.com/@zakleever" target="_blank">YouTube</a>
+    </div>
+
   </div>
 
   <div class="footer">
@@ -135,12 +160,8 @@
 
   <script>
     function toggleBio() {
-      var bio = document.getElementById('bio');
-      if (bio.style.display === 'none' || bio.style.display === '') {
-        bio.style.display = 'block';
-      } else {
-        bio.style.display = 'none';
-      }
+      const bio = document.getElementById('bio');
+      bio.style.display = (bio.style.display === 'block') ? 'none' : 'block';
     }
   </script>
 
