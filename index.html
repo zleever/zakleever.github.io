@@ -10,6 +10,7 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       background-color: #000;
       color: #fff;
@@ -22,54 +23,66 @@
       text-align: center;
       padding: 40px 20px;
       opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
+      animation: fadeIn 3s ease-in-out forwards;
+      cursor: url('z-cursor.png'), auto;
     }
+
     @keyframes fadeIn {
       to { opacity: 1; }
     }
+
     img.logo {
       max-width: 150px;
       margin-bottom: 40px;
     }
+
     a.release {
       display: block;
-      max-width: 300px;
+      max-width: 400px;
       margin: 0 auto 20px;
       transition: transform 0.3s ease;
     }
+
     a.release:hover {
       transform: scale(1.05);
     }
+
     img.album {
       width: 100%;
-      border: 2px solid #fff;
     }
+
     .bio {
-      max-width: 500px;
+      max-width: 600px;
       font-size: 16px;
       line-height: 1.6;
       margin-top: 30px;
       color: #ccc;
     }
+
     .socials {
       margin-top: 30px;
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      font-weight: bold;
     }
+
     .socials a {
       color: #fff;
       text-decoration: none;
-      font-size: 14px;
-      border: 1px solid #fff;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: all 0.2s ease;
     }
+
     .socials a:hover {
-      background-color: #fff;
-      color: #000;
+      text-decoration: underline;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      font-size: 12px;
+      color: #555;
     }
   </style>
 </head>
@@ -82,7 +95,8 @@
   </a>
 
   <div class="bio">
-    Zak Leever is a music producer, artist, and multi-instrumentalist known for his genre-blurring sound, blending future soul, electronic, and hip-hop elements. A Berklee College of Music graduate, Zak’s work has earned acclaim for its emotional depth, sonic polish, and infectious energy. Based in Los Angeles, he continues to craft music that connects deeply and moves globally.
+    Zak Leever is a music producer, artist, and multi-instrumentalist known for his genre-blurring sound, blending future soul, electronic, and hip-hop elements. A Berklee College of Music graduate, Zak’s work has earned acclaim for its emotional depth, sonic polish, and infectious energy. Based in Los Angeles, he continues to craft music that connects deeply and moves globally.<br><br>
+    He has produced for top artists, built a loyal following through his innovative remixes and original releases, and gained attention from major record labels. His music bridges the technical finesse of jazz and electronic music with the emotional rawness of soul and hip-hop. Zak is committed to creating music that’s not only heard but deeply felt.
   </div>
 
   <div class="socials">
@@ -90,6 +104,10 @@
     <a href="https://open.spotify.com/artist/3QOVtB6UoXYvppwM0nQLtd" target="_blank">Spotify</a>
     <a href="https://www.tiktok.com/@zakleever" target="_blank">TikTok</a>
     <a href="https://www.youtube.com/@zakleever" target="_blank">YouTube</a>
+  </div>
+
+  <div class="footer">
+    © Zak Leever. All rights reserved.
   </div>
 
 </body>
