@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,38 +5,29 @@
   <title>Zak Leever</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    html {
       scroll-behavior: smooth;
     }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      pointer-events: none;
-    }
-
     body {
-      cursor: url('z-cursor-glow-huge.png'), auto;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
       padding: 40px 20px;
+      cursor: url('z-cursor-glow-huge.png'), auto;
     }
-
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
     .fade-in {
       animation: fadeIn 3s ease-in-out forwards;
       opacity: 0;
     }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
     .logo-fixed {
       position: fixed;
       top: 20px;
@@ -45,35 +35,14 @@
       width: 80px;
       height: auto;
       transition: width 0.3s ease;
-      z-index: 10;
+      z-index: 1000;
     }
-
     @media (max-width: 600px) {
       .logo-fixed {
         width: 50px;
       }
     }
-
-    .updates {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      font-weight: bold;
-      z-index: 10;
-    }
-
-    .updates a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .updates a:hover {
-      text-decoration: underline;
-    }
-
     .main-content {
-      position: relative;
-      z-index: 5;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -81,29 +50,24 @@
       padding-top: 120px;
       padding-bottom: 60px;
     }
-
     a.release {
       display: block;
       max-width: 600px;
       margin: 0 auto 20px;
       transition: transform 0.3s ease;
     }
-
     a.release:hover {
       transform: scale(1.05);
     }
-
     img.album {
       width: 100%;
     }
-
     .tagline {
       margin-top: 20px;
       font-size: 14px;
       color: #888;
       font-style: italic;
     }
-
     .bio-toggle {
       margin-top: 8px;
       color: #fff;
@@ -111,7 +75,6 @@
       cursor: pointer;
       text-decoration: underline;
     }
-
     .bio-content {
       max-width: 600px;
       font-size: 16px;
@@ -125,7 +88,6 @@
       max-height: 320px;
       overflow-y: auto;
     }
-
     .socials {
       margin-top: 30px;
       display: flex;
@@ -134,45 +96,50 @@
       justify-content: center;
       font-weight: bold;
     }
-
     .socials a {
       color: #fff;
       text-decoration: none;
     }
-
     .socials a:hover {
       text-decoration: underline;
     }
-
     .footer {
       position: fixed;
       bottom: 10px;
       left: 20px;
       font-size: 12px;
       color: #555;
-      z-index: 10;
+      z-index: 1000;
+    }
+    .updates {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+    .updates a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .updates a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-<canvas id="matrix"></canvas>
-
-<a href="#top">
-  <img src="logo.png" alt="Zak Leever Logo" class="logo-fixed">
-</a>
-
-<div class="updates">
-  <a href="https://laylo.com/zakleever" target="_blank" rel="noopener noreferrer">updates</a>
-</div>
-
-<div id="top" class="main-content fade-in">
-  <a href="https://open.spotify.com/album/5P7AIuPYHT1ZOQktctn06b?si=4eAnI1lRTpG2H53QAY_41g" class="release" target="_blank" rel="noopener noreferrer">
-    <img src="make-it-right.jpg" alt="Latest Release: Make It Right" class="album">
+  <a href="#top">
+    <img src="logo.png" alt="Zak Leever Logo" class="logo-fixed">
   </a>
-
-  <div class="bio-toggle" onclick="toggleBio()">bio</div>
-
-  <div class="bio-content" id="bio">
+  <div class="updates">
+    <a href="https://laylo.com/zakleever" target="_blank" rel="noopener noreferrer">updates</a>
+  </div>
+  <div id="top" class="main-content fade-in">
+    <a href="https://open.spotify.com/album/5P7AIuPYHT1ZOQktctn06b?si=4eAnI1lRTpG2H53QAY_41g" class="release" target="_blank" rel="noopener noreferrer">
+      <img src="make-it-right.jpg" alt="Latest Release: Make It Right" class="album">
+    </a>
+    <div class="bio-toggle" onclick="toggleBio()">bio</div>
+    <div class="bio-content" id="bio">
 Zak Leever’s productions have been rave-day earworms and brain-slated beats for years, unbeknownst to many. He’s a blind workhorse for his creations and for those he cares about in the music industry.
 
 Zak has lived for music since age 8, choosing the piano over Ritalin as ADHD treatment—breaking his femur once and cracking his skull to Fatboy Slim six times as a child (twice on marble tables).
@@ -184,49 +151,25 @@ Through this moniker, Leever connected with A-Trak, Diplo, Coco & Breezy, DJ Cra
 Today, Zak is a committed songwriter in the dance music space, utilizing his classical and jazz backgrounds to enrich a dying internet in need of frank humanness. Zak’s purpose is rooted in honest self-transformation and an obsession with what makes people happy—which certainly isn’t material objects, but love, forgiveness, emotional awareness, and an intimacy with meek things we find so comforting. For Zak, these are lush chords, heavy beats, and a connection with his audience at any scale.
 
 <p>info@moodswingmgmt.com</p>
+    </div>
+    <div class="socials">
+      <a href="https://instagram.com/zakleever" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://open.spotify.com/artist/52YFhvzbffRkaVJQCjFlpU" target="_blank" rel="noopener noreferrer">Spotify</a>
+      <a href="https://www.tiktok.com/@zakleever" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://www.youtube.com/@zakleever" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
   </div>
-
-  <div class="socials">
-    <a href="https://instagram.com/zakleever" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://open.spotify.com/artist/52YFhvzbffRkaVJQCjFlpU" target="_blank" rel="noopener noreferrer">Spotify</a>
-    <a href="https://www.tiktok.com/@zakleever" target="_blank" rel="noopener noreferrer">TikTok</a>
-    <a href="https://www.youtube.com/@zakleever" target="_blank" rel="noopener noreferrer">YouTube</a>
+  <div class="footer" id="footer">
+    © <span id="year"></span> Zak Leever. All rights reserved.
   </div>
-</div>
-
-<div class="footer" id="footer">
-  © <span id="year"></span> Zak Leever. All rights reserved.
-</div>
-
-<script>
-  function toggleBio() {
-    const bio = document.getElementById('bio');
-    bio.style.display = (bio.style.display === 'block') ? 'none' : 'block';
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('year').textContent = new Date().getFullYear();
-  });
-
-  // Matrix "Z" animation
-  const canvas = document.getElementById("matrix");
-  const ctx = canvas.getContext("2d");
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-  const letters = Array(Math.floor(canvas.width / 20)).fill(1);
-  function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#0ff"; // glow cyan
-    ctx.font = "16pt monospace";
-    letters.forEach((y, i) => {
-      const text = "Z";
-      const x = i * 20;
-      ctx.fillText(text, x, y);
-      letters[i] = y > canvas.height + Math.random() * 10000 ? 0 : y + 20;
+  <script>
+    function toggleBio() {
+      const bio = document.getElementById('bio');
+      bio.style.display = (bio.style.display === 'block') ? 'none' : 'block';
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('year').textContent = new Date().getFullYear();
     });
-  }
-  setInterval(drawMatrix, 50);
-</script>
+  </script>
 </body>
 </html>
