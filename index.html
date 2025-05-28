@@ -21,16 +21,13 @@
       padding: 40px 20px;
       cursor: url('z-cursor-glow-huge.png'), auto;
     }
-
     @keyframes fadeIn {
       to { opacity: 1; }
     }
-
     .fade-in {
       animation: fadeIn 3s ease-in-out forwards;
       opacity: 0;
     }
-
     .logo-fixed {
       position: fixed;
       top: 20px;
@@ -40,11 +37,22 @@
       transition: width 0.3s ease;
       z-index: 1000;
     }
-
     @media (max-width: 600px) {
       .logo-fixed {
         width: 50px;
       }
+    }
+
+    #la-time {
+      position: fixed;
+      top: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      color: #888;
+      font-family: monospace;
+      z-index: 1000;
+      pointer-events: none;
     }
 
     .main-content {
@@ -55,32 +63,26 @@
       padding-top: 120px;
       padding-bottom: 60px;
     }
-
     .spaced {
       margin-top: 20px;
     }
-
     .release {
       display: block;
       max-width: 600px;
       transition: transform 0.3s ease;
     }
-
     .release:hover {
       transform: scale(1.05);
     }
-
     .album {
       width: 100%;
     }
-
     .bio-toggle {
       color: #fff;
       font-weight: bold;
       cursor: pointer;
       text-decoration: underline;
     }
-
     .bio-content,
     #top8 {
       max-width: 600px;
@@ -92,13 +94,11 @@
       transition: max-height 0.5s ease, padding 0.3s ease;
       max-height: 0;
     }
-
     .bio-content.open,
     #top8.open {
       max-height: 1000px;
       padding: 10px;
     }
-
     .socials {
       display: flex;
       gap: 20px;
@@ -106,16 +106,13 @@
       justify-content: center;
       font-weight: bold;
     }
-
     .socials a {
       color: #fff;
       text-decoration: none;
     }
-
     .socials a:hover {
       text-decoration: underline;
     }
-
     .footer {
       position: fixed;
       bottom: 10px;
@@ -124,7 +121,6 @@
       color: #555;
       z-index: 1000;
     }
-
     .updates {
       position: fixed;
       top: 20px;
@@ -132,16 +128,13 @@
       font-weight: bold;
       z-index: 1000;
     }
-
     .updates a {
       color: #fff;
       text-decoration: none;
     }
-
     .updates a:hover {
       text-decoration: underline;
     }
-
     .top8-wrapper {
       margin: 20px auto 60px;
       max-width: 600px;
@@ -151,18 +144,15 @@
       font-family: Tahoma, sans-serif;
       border: 1px solid #f4a460;
     }
-
     .top8-header {
       background-color: #ffe4b5;
       border-bottom: 2px solid #f4a460;
       padding: 10px;
       font-weight: bold;
     }
-
     .top8-friends {
       font-weight: normal;
     }
-
     .top8-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -170,46 +160,37 @@
       padding: 20px;
       justify-items: center;
     }
-
     .top8-box img {
       width: 80px;
       height: 80px;
     }
-
     .top8-name {
       font-size: 11px;
     }
-
     @media (max-width: 600px) {
       .top8-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
       .top8-box img {
         width: 60px;
         height: 60px;
       }
-
       .top8-name {
         font-size: 10px;
       }
     }
-
     .top8-footer {
       text-align: right;
       padding: 10px;
     }
-
     .top8-footer a {
       color: darkred;
       text-decoration: none;
       font-size: 12px;
     }
-
     .top8-footer a:hover {
       text-decoration: underline;
     }
-
     .contact {
       position: fixed;
       bottom: 10px;
@@ -219,12 +200,10 @@
       z-index: 1000;
       font-weight: bold;
     }
-
     .contact a {
       color: #fff;
       text-decoration: none;
     }
-
     .contact a:hover {
       text-decoration: underline;
     }
@@ -235,20 +214,20 @@
     <img src="logo.png" alt="Zak Leever Logo" class="logo-fixed">
   </a>
 
+  <div id="la-time">Loading PT time...</div>
+
   <div class="updates">
     <a href="https://laylo.com/zakleever" target="_blank" rel="noopener noreferrer">updates</a>
   </div>
 
   <div id="top" class="main-content fade-in">
-
     <a href="https://open.spotify.com/album/5P7AIuPYHT1ZOQktctn06b?si=4eAnI1lRTpG2H53QAY_41g" class="release spaced" target="_blank" rel="noopener noreferrer">
       <img src="make-it-right.jpg" alt="Latest Release: Make It Right" class="album">
     </a>
 
     <div class="bio-toggle spaced" onclick="toggleSection('bio')">bio</div>
-
     <div class="bio-content" id="bio">
-Zak Leever’s productions have been rave-day earworms and brain-slated beats for years, unbeknownst to many. He’s a blind workhorse for his creations and for those he cares about in the music industry.
+      Zak Leever’s productions have been rave-day earworms and brain-slated beats for years, unbeknownst to many. He’s a blind workhorse for his creations and for those he cares about in the music industry.
 
 Zak has lived for music since age 8, choosing the piano over Ritalin as ADHD treatment—breaking his femur once and cracking his skull to Fatboy Slim six times as a child (twice on marble tables).
 
@@ -258,19 +237,18 @@ Through this moniker, Leever connected with A-Trak, Diplo, Coco & Breezy, DJ Cra
 
 Today, Zak is a committed songwriter in the dance music space, utilizing his classical and jazz backgrounds to enrich a dying internet in need of frank humanness. Zak’s purpose is rooted in honest self-transformation and an obsession with what makes people happy—which certainly isn’t material objects, but love, forgiveness, emotional awareness, and an intimacy with meek things we find so comforting. For Zak, these are lush chords, heavy beats, and a connection with his audience at any scale.
 
-<p>mgmt: info@moodswingmgmt.com</p>
+      <p>mgmt: info@moodswingmgmt.com</p>
     </div>
 
     <div class="socials spaced">
-      <a href="https://instagram.com/zakleever" target="_blank" rel="noopener noreferrer">instagram</a>
-      <a href="https://open.spotify.com/artist/52YFhvzbffRkaVJQCjFlpU" target="_blank" rel="noopener noreferrer">spotify</a>
-      <a href="https://www.tiktok.com/@zakleever" target="_blank" rel="noopener noreferrer">tiktok</a>
-      <a href="https://www.youtube.com/@zakleever" target="_blank" rel="noopener noreferrer">youtube</a>
-      <a href="https://soundcloud.com/zakleever" target="_blank" rel="noopener noreferrer">soundcloud</a>
+      <a href="https://instagram.com/zakleever" target="_blank">instagram</a>
+      <a href="https://open.spotify.com/artist/52YFhvzbffRkaVJQCjFlpU" target="_blank">spotify</a>
+      <a href="https://www.tiktok.com/@zakleever" target="_blank">tiktok</a>
+      <a href="https://www.youtube.com/@zakleever" target="_blank">youtube</a>
+      <a href="https://soundcloud.com/zakleever" target="_blank">soundcloud</a>
     </div>
 
     <div class="bio-toggle spaced" onclick="toggleSection('top8')">top 8</div>
-
     <div id="top8">
       <div class="top8-wrapper">
         <div class="top8-header">
@@ -292,7 +270,6 @@ Today, Zak is a committed songwriter in the dance music space, utilizing his cla
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="footer" id="footer">
@@ -311,6 +288,20 @@ Today, Zak is a committed songwriter in the dance music space, utilizing his cla
 
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      function updateLATime() {
+        const laTime = new Date().toLocaleTimeString('en-US', {
+          timeZone: 'America/Los_Angeles',
+          hour12: false,
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        });
+        document.getElementById('la-time').textContent = `${laTime} PT`;
+      }
+
+      updateLATime();
+      setInterval(updateLATime, 1000);
     });
   </script>
 </body>
