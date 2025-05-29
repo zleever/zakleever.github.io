@@ -103,16 +103,15 @@
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      font-weight: bold;
       margin-top: 20px;
     }
-    .socials a img {
-      width: 28px;
-      height: 28px;
-      filter: invert(1);
-      transition: transform 0.2s ease;
+    .socials a {
+      color: #fff;
+      text-decoration: none;
     }
-    .socials a:hover img {
-      transform: scale(1.2);
+    .socials a:hover {
+      text-decoration: underline;
     }
     .footer {
       position: fixed;
@@ -228,22 +227,45 @@
 
     <div class="bio-toggle spaced" onclick="toggleSection('bio')">bio</div>
     <div class="bio-content" id="bio">
-      Zak Leever’s productions have been rave-day earworms and brain-slated beats for years, unbeknownst to many...
+      Zak Leever’s productions have been rave-day earworms and brain-slated beats for years, unbeknownst to many. He’s a blind workhorse for his creations and for those he cares about in the music industry.
+
+Zak has lived for music since age 8, choosing the piano over Ritalin as ADHD treatment—breaking his femur once and cracking his skull to Fatboy Slim six times as a child (twice on marble tables).
+
+Falling deeply for electronic music at 14, Zak recreated deadmau5 and Skrillex sounds, made his YouTube debut, and began remixing amidst EDM’s explosion in the US as commercial music. With his best friends, Zak threw high school raves, inventing his teenage moniker “Stand Tall Fists Up” (AKA STFU).
+
+Through this moniker, Leever connected with A-Trak, Diplo, Coco & Breezy, DJ Craze, and a slew of other DJs at a young age, becoming a craftsman for dance music. His productions have been Billboard Dance hits and are practically in constant rotation on SiriusXM.
+
+Today, Zak is a committed songwriter in the dance music space, utilizing his classical and jazz backgrounds to enrich a dying internet in need of frank humanness. Zak’s purpose is rooted in honest self-transformation and an obsession with what makes people happy—which certainly isn’t material objects, but love, forgiveness, emotional awareness, and an intimacy with meek things we find so comforting. For Zak, these are lush chords, heavy beats, and a connection with his audience at any scale.
 
       <p>mgmt: info@moodswingmgmt.com</p>
     </div>
 
-    <!-- Local white social icons -->
     <div class="socials">
-      <a href="https://instagram.com/zakleever" target="_blank"><img src="icon-instagram.svg" alt="Instagram"></a>
-      <a href="https://open.spotify.com/artist/52YFhvzbffRkaVJQCjFlpU" target="_blank"><img src="icon-spotify.svg" alt="Spotify"></a>
-      <a href="https://www.tiktok.com/@zakleever" target="_blank"><img src="icon-tiktok.svg" alt="TikTok"></a>
-      <a href="https://www.youtube.com/@zakleever" target="_blank"><img src="icon-youtube.svg" alt="YouTube"></a>
-      <a href="https://soundcloud.com/zakleever" target="_blank"><img src="icon-soundcloud.svg" alt="SoundCloud"></a>
+      <a href="https://instagram.com/zakleever" target="_blank">IG</a>
+      <a href="https://open.spotify.com/artist/52YFhvzbffRkaVJQCjFlpU" target="_blank">Spotify</a>
+      <a href="https://www.tiktok.com/@zakleever" target="_blank">TikTok</a>
+      <a href="https://www.youtube.com/@zakleever" target="_blank">YouTube</a>
+      <a href="https://soundcloud.com/zakleever" target="_blank">Soundcloud</a>
     </div>
 
     <div class="top8-wrapper">
-      <!-- Top 8 Section Here -->
+      <div class="top8-header">
+        Your Top 8<br>
+        <span class="top8-friends">You have <span style="color: red;">42069</span> Friends.</span>
+      </div>
+      <div class="top8-grid">
+        <div class="top8-box"><img src="top8_5_tom.png" alt="DJ Tom"><div class="top8-name">Tom</div></div>
+        <div class="top8-box"><img src="top8_2_a-trak.png" alt="A-Trak"><div class="top8-name">A-Trak</div></div>
+        <div class="top8-box"><img src="top8_8_diplo.png" alt="Diplo"><div class="top8-name">Diplo</div></div>
+        <div class="top8-box"><img src="top8_7_anna_lunoe.png" alt="Anna Lunoe"><div class="top8-name">Anna Lunoe</div></div>
+        <div class="top8-box"><img src="top8_6_dj_craze.png" alt="DJ Craze"><div class="top8-name">DJ Craze</div></div>
+        <div class="top8-box"><img src="top8_1_coco_and_breezy.png" alt="Coco & Breezy"><div class="top8-name">Coco & Breezy</div></div>
+        <div class="top8-box"><img src="top8_3_channel_tres.png" alt="Channel Tres"><div class="top8-name">Channel Tres</div></div>
+        <div class="top8-box"><img src="top8_4_skrillex.png" alt="Skrillex"><div class="top8-name">Skrillex</div></div>
+      </div>
+      <div class="top8-footer">
+        <a href="#">View All of Your Friends</a>
+      </div>
     </div>
   </div>
 
@@ -272,7 +294,7 @@
           minute: '2-digit',
           second: '2-digit'
         });
-        document.getElementById('la-time').textContent = `${laTime} PT`;
+        document.getElementById('la-time').textContent = ${laTime} PT;
       }
 
       updateLATime();
