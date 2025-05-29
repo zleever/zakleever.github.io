@@ -42,7 +42,6 @@
         width: 50px;
       }
     }
-
     #la-time {
       position: fixed;
       top: 26px;
@@ -54,7 +53,6 @@
       z-index: 1000;
       pointer-events: none;
     }
-
     .main-content {
       display: flex;
       flex-direction: column;
@@ -83,8 +81,7 @@
       cursor: pointer;
       text-decoration: underline;
     }
-    .bio-content,
-    #top8 {
+    .bio-content {
       max-width: 600px;
       color: #ccc;
       text-align: left;
@@ -94,8 +91,7 @@
       transition: max-height 0.5s ease, padding 0.3s ease;
       max-height: 0;
     }
-    .bio-content.open,
-    #top8.open {
+    .bio-content.open {
       max-height: 1000px;
       padding: 10px;
     }
@@ -248,26 +244,23 @@ Today, Zak is a committed songwriter in the dance music space, utilizing his cla
       <a href="https://soundcloud.com/zakleever" target="_blank">Soundcloud</a>
     </div>
 
-    <div class="bio-toggle spaced" onclick="toggleSection('top8')">top 8</div>
-    <div id="top8">
-      <div class="top8-wrapper">
-        <div class="top8-header">
-          Your Top 8<br>
-          <span class="top8-friends">You have <span style="color: red;">420</span> Friends.</span>
-        </div>
-        <div class="top8-grid">
-          <div class="top8-box"><img src="top8_5_tom.png" alt="Tom"><div class="top8-name">Tom</div></div>
-          <div class="top8-box"><img src="top8_2_a-trak.png" alt="A-Trak"><div class="top8-name">A-Trak</div></div>
-          <div class="top8-box"><img src="top8_8_diplo.png" alt="Diplo"><div class="top8-name">Diplo</div></div>
-          <div class="top8-box"><img src="top8_7_anna_lunoe.png" alt="Anna Lunoe"><div class="top8-name">Anna Lunoe</div></div>
-          <div class="top8-box"><img src="top8_6_dj_craze.png" alt="DJ Craze"><div class="top8-name">DJ Craze</div></div>
-          <div class="top8-box"><img src="top8_1_coco_and_breezy.png" alt="Coco & Breezy"><div class="top8-name">Coco & Breezy</div></div>
-          <div class="top8-box"><img src="top8_3_channel_tres.png" alt="Channel Tres"><div class="top8-name">Channel Tres</div></div>
-          <div class="top8-box"><img src="top8_4_skrillex.png" alt="Skrillex"><div class="top8-name">Skrillex</div></div>
-        </div>
-        <div class="top8-footer">
-          <a href="#">View All of Your Friends</a>
-        </div>
+    <div class="top8-wrapper spaced">
+      <div class="top8-header">
+        Your Top 8<br>
+        <span class="top8-friends">You have <span style="color: red;">420</span> Friends.</span>
+      </div>
+      <div class="top8-grid">
+        <div class="top8-box"><img src="top8_5_tom.png" alt="Tom"><div class="top8-name">Tom</div></div>
+        <div class="top8-box"><img src="top8_2_a-trak.png" alt="A-Trak"><div class="top8-name">A-Trak</div></div>
+        <div class="top8-box"><img src="top8_8_diplo.png" alt="Diplo"><div class="top8-name">Diplo</div></div>
+        <div class="top8-box"><img src="top8_7_anna_lunoe.png" alt="Anna Lunoe"><div class="top8-name">Anna Lunoe</div></div>
+        <div class="top8-box"><img src="top8_6_dj_craze.png" alt="DJ Craze"><div class="top8-name">DJ Craze</div></div>
+        <div class="top8-box"><img src="top8_1_coco_and_breezy.png" alt="Coco & Breezy"><div class="top8-name">Coco & Breezy</div></div>
+        <div class="top8-box"><img src="top8_3_channel_tres.png" alt="Channel Tres"><div class="top8-name">Channel Tres</div></div>
+        <div class="top8-box"><img src="top8_4_skrillex.png" alt="Skrillex"><div class="top8-name">Skrillex</div></div>
+      </div>
+      <div class="top8-footer">
+        <a href="#">View All of Your Friends</a>
       </div>
     </div>
   </div>
